@@ -2,6 +2,10 @@
 
 pkmng is an Angular wrapper of [PokéAPI](https://pokeapi.co/).
 
+It features auto caching in browser storage and enumerations to help consumers figure out what to pass to the API.
+
+TODO: in-code documentation
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.3.
 
 ## Code scaffolding
