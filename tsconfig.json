@@ -16,6 +16,17 @@
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
+    "paths": {
+      "pkmng": [
+        "./dist/pkmng"
+      ],
+      "pkmng/models": [
+        "./dist/pkmng/models"
+      ],
+      "pkmng/constants": [
+        "./dist/pkmng/constants"
+      ]
+    },
     "target": "es2020",
     "module": "es2020",
     "lib": [

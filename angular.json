@@ -3,5 +3,36 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+    "pkmng": {
+      "projectType": "library",
+      "root": "projects/pkmng",
+      "sourceRoot": "projects/pkmng/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/pkmng/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/pkmng/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/pkmng/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/pkmng/src/test.ts",
+            "tsConfig": "projects/pkmng/tsconfig.spec.json",
+            "karmaConfig": "projects/pkmng/karma.conf.js"
+          }
+        }
+      }
+    }
   }
 }

@@ -1,0 +1,38 @@
+import { AbilityEffectChange } from '../pokemon/ability-effect-change';
+import { APIResource } from '../utility/common/api-resource';
+import { MachineVersionDetail } from '../utility/common/machine-version-detail';
+import { Name } from '../utility/common/name';
+import { NamedAPIResource } from '../utility/common/named-api-resource';
+import { VerboseEffect } from '../utility/common/verbose-effect';
+import { ContestComboSets } from './contest-combo-sets';
+import { MoveFlavorText } from './move-flavor-text';
+import { MoveMetaData } from './move-meta-data';
+import { MoveStatChange } from './move-stat-change';
+import { PastMoveStatValues } from './past-move-stat-values';
+
+export interface Move {
+  id: number;
+  name: string;
+  accuracy: number;
+  effect_chance: number;
+  pp: number;
+  priority: number;
+  power: number;
+  contest_combos: ContestComboSets;
+  contest_type: NamedAPIResource;
+  contest_effect: APIResource;
+  damage_class: NamedAPIResource;
+  effect_entries: Array<VerboseEffect>;
+  effect_changes: Array<AbilityEffectChange>;
+  learned_by_pokemon: Array<NamedAPIResource>;
+  flavor_text_entries: Array<MoveFlavorText>;
+  generation: NamedAPIResource;
+  machines: Array<MachineVersionDetail>;
+  meta: MoveMetaData;
+  names: Array<Name>;
+  past_values: Array<PastMoveStatValues>;
+  stat_changes: Array<MoveStatChange>;
+  super_contest_effect: APIResource;
+  target: NamedAPIResource;
+  type: NamedAPIResource;
+};
