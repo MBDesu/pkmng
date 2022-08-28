@@ -1,13 +1,14 @@
 {
   "name": "pkmng",
-  "version": "0.1.14",
+  "version": "0.1.16",
   "repository": {
     "type": "git",
     "url": "https://github.com/MBDesu/pkmng.git"
   },
   "peerDependencies": {
     "@angular/common": "^14.1.0",
-    "@angular/core": "^14.1.0"
+    "@angular/core": "^14.1.0",
+    "@ngneat/cashew": "^3.0.0"
   },
   "dependencies": {
     "tslib": "^2.3.0"
