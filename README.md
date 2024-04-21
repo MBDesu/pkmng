@@ -4,22 +4,58 @@ pkmng is an Angular wrapper of [PokéAPI](https://pokeapi.co/).
 
 It features auto caching in browser storage and enumerations to help consumers figure out what to pass to the API.
 
-TODO: in-code documentation
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.3.
+## Exposed Services
 
-## Code scaffolding
+Exposed services (self-explanatory):
+- `BerryService`
+- `ContestService`
+- `EncounterService`
+- `EvolutionService`
+- `GameService`
+- `ItemService`
+- `LocationService`
+- `MachineService`
+- `MoveService`
+- `PokemonService`
+- `UtilityService`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+## Usage
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```typescript
+import { Component, inject, OnInit } from '@angular/core';
+import { BerryService, PkmngModule } from 'pkmng';
+import { RouterOutlet } from '@angular/router';
 
-## Further help
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [
+    RouterOutlet,
+    PkmngModule
+  ],
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.scss'
+})
+export class AppComponent implements OnInit {
+  
+  berryService = inject(BerryService);
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+  ngOnInit(): void {
+    this.berryService.getBerry('oran').subscribe((berryData) => {
+      console.log(berryData);
+    });
+  }
+}
+```
 
 ## License
 
 This software uses the MIT license. For more information, see [LICENSE](https://github.com/MBDesu/pkmng/blob/main/LICENSE).
+
+## TODO
+
+- [ ] in-code documentation
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.5.
