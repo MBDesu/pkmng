@@ -6,8 +6,8 @@
     "url": "https://github.com/MBDesu/pkmng.git"
   },
   "peerDependencies": {
-    "@angular/common": "^14.1.0",
-    "@angular/core": "^14.1.0",
+    "@angular/common": "^16.2.12",
+    "@angular/core": "^16.2.12",
     "@ngneat/cashew": "^3.0.0"
   },
   "dependencies": {
